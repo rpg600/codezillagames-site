@@ -1,0 +1,1 @@
+# app-ads.txt — à remplir avec les lignes fournies par AppLovin MAX et Google AdMob
