@@ -46,7 +46,14 @@
 </ul>
 
 <h2>4. Réglages à distance (Firebase Remote Config)</h2>
-<p>Le jeu télécharge depuis Firebase Remote Config, fourni par Google, des réglages de difficulté que nous pouvons modifier sans mise à jour du jeu. Pour cela, le SDK Firebase utilise un identifiant d'installation créé sur votre appareil (Firebase Installations) et envoie à Google des informations techniques (version du jeu, système, langue, pays) afin de recevoir les bons réglages. Aucune donnée de partie n'est envoyée par ce service. Base légale : notre intérêt légitime à faire fonctionner et à équilibrer le jeu.</p>
+<p>Le jeu télécharge depuis Firebase Remote Config, fourni par Google, des réglages de difficulté que nous pouvons modifier sans mise à jour du jeu.</p>
+<ul>
+<li><strong>Ce que le jeu reçoit</strong> : le type de difficulté de certains niveaux et un numéro de version de ces réglages. Ces réglages sont les mêmes pour tous les joueurs : ils ne sont adaptés ni à vous ni à un groupe de joueurs.</li>
+<li><strong>Quand</strong> : au lancement du jeu, en arrière-plan, au plus une fois toutes les 12 heures. Entre deux, le jeu réutilise les derniers réglages reçus, gardés sur votre appareil. Un nouveau réglage s'applique à partir du niveau suivant, jamais pendant une partie.</li>
+<li><strong>Données utilisées</strong> : pour cette récupération, le SDK Firebase utilise un identifiant d'installation créé sur votre appareil (Firebase Installations, le même qu'en section 3, sans lien avec l'identifiant publicitaire) et l'envoie à Google avec des informations techniques (version du jeu, système, langue, pays et fuseau horaire de l'appareil). Le jeu n'envoie lui-même aucune donnée de partie à ce service. Si vous avez accepté la mesure d'audience (section 3), le SDK peut y joindre le niveau le plus avancé, la version du jeu et la tranche de pièces déjà relevés par Google Analytics ; nous ne nous en servons pas pour choisir les réglages.</li>
+<li><strong>Base légale</strong> : notre intérêt légitime à faire fonctionner le jeu et à en équilibrer la difficulté. Cette récupération a lieu quel que soit votre choix sur la mesure d'audience ; elle ne sert ni à la publicité ni à la mesure d'audience.</li>
+<li><strong>Durée</strong> : l'identifiant d'installation reste sur votre appareil jusqu'à la désinstallation du jeu. Google indique le conserver jusqu'à ce que nous demandions sa suppression, puis l'effacer de ses systèmes sous 180 jours.</li>
+</ul>
 
 <h2>5. Achats intégrés</h2>
 <p>Les achats sont traités par Apple (App Store) ou Google (Google Play), selon leurs propres politiques de confidentialité. Nous ne recevons jamais vos données de paiement. Le jeu reçoit seulement la confirmation de l'achat pour créditer votre partie sur l'appareil. Base légale : l'exécution du contrat d'achat.</p>
@@ -67,7 +74,8 @@
 <ul>
 <li>Données du jeu : sur votre appareil, jusqu'à la désinstallation.</li>
 <li>Mesure d'audience : les données au niveau des événements et des utilisateurs sont conservées 14 mois dans Google Analytics ; la copie exportée vers BigQuery est supprimée automatiquement après 60 jours.</li>
-<li>Données publicitaires et réglages à distance : selon les règles de Google.</li>
+<li>Données publicitaires : selon les règles de Google.</li>
+<li>Réglages à distance : identifiant d'installation sur votre appareil jusqu'à la désinstallation ; chez Google, jusqu'à notre demande de suppression, puis effacement sous 180 jours (section 4).</li>
 <li>Échanges par e-mail : 3 ans après notre dernier échange, puis suppression.</li>
 </ul>
 
@@ -128,7 +136,14 @@
 </ul>
 
 <h2>4. Remote settings (Firebase Remote Config)</h2>
-<p>The game downloads difficulty settings from Firebase Remote Config, provided by Google, which we can change without a game update. To do so, the Firebase SDK uses an installation identifier created on your device (Firebase Installations) and sends Google technical information (game version, operating system, language, country) to receive the right settings. No gameplay data is sent by this service. Legal basis: our legitimate interest in running and balancing the game.</p>
+<p>The game downloads difficulty settings from Firebase Remote Config, provided by Google, which we can change without a game update.</p>
+<ul>
+<li><strong>What the game receives</strong>: the difficulty type of some levels and a version number for these settings. The settings are the same for all players: they are not tailored to you or to any group of players.</li>
+<li><strong>When</strong>: when the game starts, in the background, at most once every 12 hours. In between, the game reuses the last settings received, kept on your device. A new setting applies from the next level, never during a game.</li>
+<li><strong>Data used</strong>: for this download, the Firebase SDK uses an installation identifier created on your device (Firebase Installations, the same as in section 3, unrelated to the advertising identifier) and sends it to Google with technical information (game version, operating system, language, country and time zone of the device). The game itself sends no gameplay data to this service. If you have accepted analytics (section 3), the SDK may add the furthest level reached, the game version and the coin range already recorded by Google Analytics; we do not use them to choose the settings.</li>
+<li><strong>Legal basis</strong>: our legitimate interest in running the game and balancing its difficulty. This download happens whatever your analytics choice; it is used neither for advertising nor for analytics.</li>
+<li><strong>Retention</strong>: the installation identifier stays on your device until you uninstall the game. Google states that it keeps it until we ask for its deletion, then erases it from its systems within 180 days.</li>
+</ul>
 
 <h2>5. In-app purchases</h2>
 <p>Purchases are processed by Apple (App Store) or Google (Google Play), under their own privacy policies. We never receive your payment details. The game only receives the purchase confirmation, to credit your game on your device. Legal basis: performance of the purchase contract.</p>
@@ -149,7 +164,8 @@
 <ul>
 <li>Game data: on your device, until you uninstall the game.</li>
 <li>Analytics: event-level and user-level data are kept for 14 months in Google Analytics; the copy exported to BigQuery is deleted automatically after 60 days.</li>
-<li>Advertising data and remote settings: under Google's rules.</li>
+<li>Advertising data: under Google's rules.</li>
+<li>Remote settings: installation identifier on your device until you uninstall the game; at Google, until we ask for its deletion, then erased within 180 days (section 4).</li>
 <li>Email exchanges: 3 years after our last exchange, then deleted.</li>
 </ul>
 
