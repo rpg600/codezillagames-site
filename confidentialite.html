@@ -5,7 +5,7 @@
 
 <section class="card" id="fr">
 <h1>Politique de confidentialité — Sushi Trio</h1>
-<p><em>Dernière mise à jour : 18 novembre 2026</em></p>
+<p><em>Dernière mise à jour : 20 novembre 2026</em></p>
 
 <h2>Qui sommes-nous ?</h2>
 <p>Sushi Trio est édité par CodeZilla, SARL à associé unique (EURL) au capital de 1 000 €, RCS Paris 889 278 339, dont le siège est au 14 rue Bausset, 75015 Paris, France. CodeZilla, représentée par son gérant Reinis Grinbergs, est responsable des traitements décrits ici. Contact : <a href="mailto:contact@codezillagames.com">contact@codezillagames.com</a>.</p>
@@ -14,8 +14,8 @@
 <ul>
 <li>Pas de compte, pas de nom, pas d'adresse e-mail demandés. Votre progression reste sur votre appareil.</li>
 <li>Le jeu affiche des publicités fournies par Google AdMob, limitées aux contenus tous publics.</li>
-<li>Pour régler la difficulté des niveaux, le jeu utilise Google Analytics pour Firebase (mesure d'audience) et Firebase Remote Config (réglages à distance).</li>
-<li>Dans l'Espace économique européen (EEE), au Royaume-Uni et en Suisse, un message de Google vous demande votre choix avant toute publicité personnalisée et avant la mesure d'audience. Vous pouvez accepter ou refuser, puis changer d'avis dans <strong>Réglages du jeu &gt; Choix publicitaires</strong>.</li>
+<li>Pour régler la difficulté des niveaux et corriger les plantages, le jeu utilise Google Analytics pour Firebase (mesure d'audience), Firebase Crashlytics (rapports de plantage) et Firebase Remote Config (réglages à distance).</li>
+<li>Dans l'Espace économique européen (EEE), au Royaume-Uni et en Suisse, un message de Google vous demande votre choix avant toute publicité personnalisée, avant la mesure d'audience et avant l'envoi de rapports de plantage. Vous pouvez accepter ou refuser, puis changer d'avis dans <strong>Réglages du jeu &gt; Choix publicitaires</strong>.</li>
 <li>Aux États-Unis, dans les États dont la loi le prévoit (par exemple la Californie), vous pouvez vous opposer à la « vente » ou au « partage » de vos données à des fins publicitaires dans <strong>Réglages du jeu &gt; Choix publicitaires</strong>.</li>
 <li>Le jeu ne demande pas l'autorisation de suivi sur iPhone et n'utilise pas l'identifiant publicitaire de l'iPhone (IDFA).</li>
 <li>Les achats sont traités par Apple ou Google : nous ne recevons jamais vos données de paiement.</li>
@@ -37,13 +37,21 @@
 <h2>3. Mesure d'audience (Google Analytics pour Firebase)</h2>
 <p>Pour savoir si les niveaux sont trop faciles ou trop difficiles, et pour équilibrer l'économie du jeu, nous utilisons Google Analytics pour Firebase, fourni par Google.</p>
 <ul>
-<li><strong>Données envoyées</strong> : le déroulé de vos parties (niveau joué et sa version, résultat, durée, nombre de coups, progression, aides et boosters utilisés), les pièces gagnées et dépensées, l'affichage des publicités, les achats intégrés (produit acheté ; le SDK de Google peut aussi relever le prix et la devise), le niveau le plus avancé, la version du jeu et des réglages de difficulté. Le SDK y ajoute un identifiant d'installation créé par Firebase, des informations techniques (système, langue, type d'appareil), le pays ou la région déduits de l'adresse IP, les sessions, la première ouverture et les mises à jour.</li>
+<li><strong>Données envoyées</strong> : le déroulé de vos parties (niveau joué et sa version, résultat, durée, nombre de coups, progression, aides et boosters utilisés), les pièces gagnées et dépensées, l'affichage des publicités, les achats intégrés (produit acheté, prix et devise), l'ouverture de la boutique et de la fenêtre des vies, l'appui sur un prix, le niveau le plus avancé, la version du jeu et des réglages de difficulté. Le SDK y ajoute un identifiant d'installation créé par Firebase, des informations techniques (système, langue, type d'appareil), le pays ou la région déduits de l'adresse IP, les sessions, la première ouverture et les mises à jour.</li>
 <li><strong>Ce que nous n'envoyons pas</strong> : ni nom, ni e-mail, ni identifiant publicitaire. Les fonctions publicitaires de Google Analytics sont désactivées (signaux Google et personnalisation des annonces), ainsi que la collecte de la localisation précise. Ces données ne servent pas à la publicité et nous ne les relions pas à votre identité.</li>
 <li><strong>Avec votre consentement</strong> : dans l'EEE, au Royaume-Uni et en Suisse, rien n'est envoyé avant votre réponse au message de Google, et la mesure n'est active que si vous acceptez le stockage d'informations sur votre appareil et l'accès à celles-ci. Si vous refusez, aucune donnée de mesure n'est envoyée. Si vous retirez votre accord dans <strong>Réglages du jeu &gt; Choix publicitaires</strong>, la mesure s'arrête. Hors de ces régions, la mesure est active une fois que le message de Google a indiqué qu'aucun consentement n'est requis.</li>
 <li><strong>Analyse des données</strong> : nous exportons ces événements vers Google BigQuery (Google Cloud, stockage dans l'Union européenne) pour les analyser.</li>
 <li><strong>Bases légales</strong> : votre consentement dans l'EEE, au Royaume-Uni et en Suisse ; ailleurs, notre intérêt légitime à améliorer le jeu.</li>
-<li>Le jeu n'utilise aucun outil de rapport de plantage.</li>
 <li>En savoir plus : <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></li>
+</ul>
+
+<h2>3 bis. Rapports de plantage (Firebase Crashlytics)</h2>
+<p>Pour détecter et corriger les plantages et les erreurs du jeu, nous utilisons Firebase Crashlytics, fourni par Google.</p>
+<ul>
+<li><strong>Données envoyées en cas de plantage ou d'erreur</strong> : la trace technique de l'erreur, l'état de l'appareil à ce moment (modèle, système, mémoire et espace libres, orientation, appareil modifié ou non), la version du jeu, le niveau joué, l'écran affiché, la version des réglages de difficulté, un identifiant d'installation Crashlytics et l'identifiant d'installation Firebase.</li>
+<li><strong>Ce que nous n'envoyons pas</strong> : ni nom, ni e-mail, ni identifiant publicitaire. Ces données ne servent pas à la publicité et nous ne les relions pas à votre identité.</li>
+<li><strong>Avec votre consentement</strong> : même choix et mêmes régions que la mesure d'audience (section 3). Si vous refusez ou retirez votre accord dans <strong>Réglages du jeu &gt; Choix publicitaires</strong>, aucun rapport n'est envoyé.</li>
+<li><strong>Bases légales</strong> : votre consentement dans l'EEE, au Royaume-Uni et en Suisse ; ailleurs, notre intérêt légitime à faire fonctionner le jeu.</li>
 </ul>
 
 <h2>4. Réglages à distance (Firebase Remote Config)</h2>
@@ -69,12 +77,13 @@
 <p>Si vous nous écrivez, nous utilisons votre adresse e-mail et votre message pour vous répondre. Base légale : notre intérêt légitime à répondre à vos demandes.</p>
 
 <h2>9. Destinataires et transferts hors de l'Union européenne</h2>
-<p>Les destinataires sont Google (publicité, mesure d'audience, réglages à distance, Google Play) et Apple (App Store). Google et Apple peuvent traiter des données hors de l'Union européenne, notamment aux États-Unis. Google indique encadrer ces transferts par le cadre de protection des données UE–États-Unis (Data Privacy Framework) et par les clauses contractuelles types de la Commission européenne. Apple traite les achats selon sa propre politique de confidentialité.</p>
+<p>Les destinataires sont Google (publicité, mesure d'audience, rapports de plantage, réglages à distance, Google Play) et Apple (App Store). Google et Apple peuvent traiter des données hors de l'Union européenne, notamment aux États-Unis. Google indique encadrer ces transferts par le cadre de protection des données UE–États-Unis (Data Privacy Framework) et par les clauses contractuelles types de la Commission européenne. Apple traite les achats selon sa propre politique de confidentialité.</p>
 
 <h2>10. Durées de conservation</h2>
 <ul>
 <li>Données du jeu : sur votre appareil, jusqu'à la désinstallation.</li>
 <li>Mesure d'audience : les données au niveau des événements et des utilisateurs sont conservées 14 mois dans Google Analytics ; la copie exportée vers BigQuery est supprimée automatiquement après 60 jours.</li>
+<li>Rapports de plantage : 90 jours chez Google (Crashlytics), puis suppression.</li>
 <li>Données publicitaires : selon les règles de Google.</li>
 <li>Réglages à distance : identifiant d'installation sur votre appareil jusqu'à la désinstallation ; chez Google, jusqu'à notre demande de suppression, puis effacement sous 180 jours (section 4).</li>
 <li>Échanges par e-mail : 3 ans après notre dernier échange, puis suppression.</li>
@@ -96,7 +105,7 @@
 
 <section class="card" id="en" lang="en">
 <h1>Privacy Policy — Sushi Trio</h1>
-<p><em>Last updated: November 18, 2026</em></p>
+<p><em>Last updated: November 20, 2026</em></p>
 
 <h2>Who we are</h2>
 <p>Sushi Trio is published by CodeZilla, a French single-member limited liability company (EURL) with a share capital of €1,000, registered in Paris under number 889 278 339 (RCS Paris), whose registered office is at 14 rue Bausset, 75015 Paris, France. CodeZilla, represented by its manager Reinis Grinbergs, is the data controller for the processing described here. Contact: <a href="mailto:contact@codezillagames.com">contact@codezillagames.com</a>.</p>
@@ -105,8 +114,8 @@
 <ul>
 <li>No account, name or email address required. Your progress stays on your device.</li>
 <li>The game shows ads served by Google AdMob, limited to content suitable for general audiences.</li>
-<li>To tune level difficulty, the game uses Google Analytics for Firebase (analytics) and Firebase Remote Config (remote settings).</li>
-<li>In the European Economic Area (EEA), the United Kingdom and Switzerland, a Google message asks for your choice before any personalised ads and before analytics. You can accept or refuse, then change your mind in <strong>in-game Settings &gt; Ad choices</strong>.</li>
+<li>To tune level difficulty and fix crashes, the game uses Google Analytics for Firebase (analytics), Firebase Crashlytics (crash reports) and Firebase Remote Config (remote settings).</li>
+<li>In the European Economic Area (EEA), the United Kingdom and Switzerland, a Google message asks for your choice before any personalised ads, before analytics and before sending crash reports. You can accept or refuse, then change your mind in <strong>in-game Settings &gt; Ad choices</strong>.</li>
 <li>In the United States, in states whose law provides for it (for example California), you can opt out of the “sale” or “sharing” of your data for advertising in <strong>in-game Settings &gt; Ad choices</strong>.</li>
 <li>The game does not ask for tracking permission on iPhone and does not use the iPhone advertising identifier (IDFA).</li>
 <li>Purchases are processed by Apple or Google: we never receive your payment details.</li>
@@ -128,13 +137,21 @@
 <h2>3. Analytics (Google Analytics for Firebase)</h2>
 <p>To find out whether levels are too easy or too hard, and to balance the game's economy, we use Google Analytics for Firebase, provided by Google.</p>
 <ul>
-<li><strong>Data sent</strong>: how your games go (level played and its version, result, duration, number of moves, progress, aids and boosters used), coins earned and spent, ads shown, in-app purchases (product bought; Google's SDK may also record the price and currency), the furthest level reached, the game version and the difficulty settings version. The SDK adds an installation identifier created by Firebase, technical information (operating system, language, device type), country or region derived from the IP address, sessions, first open and updates.</li>
+<li><strong>Data sent</strong>: how your games go (level played and its version, result, duration, number of moves, progress, aids and boosters used), coins earned and spent, ads shown, in-app purchases (product bought, price and currency), opening the shop and the lives window, tapping a price, the furthest level reached, the game version and the difficulty settings version. The SDK adds an installation identifier created by Firebase, technical information (operating system, language, device type), country or region derived from the IP address, sessions, first open and updates.</li>
 <li><strong>What we do not send</strong>: no name, no email, no advertising identifier. Google Analytics advertising features are turned off (Google signals and ads personalisation), as is the collection of precise location. This data is not used for advertising and we do not link it to your identity.</li>
 <li><strong>With your consent</strong>: in the EEA, the UK and Switzerland, nothing is sent before you answer Google's message, and analytics only runs if you accept the storing of and access to information on your device. If you refuse, no analytics data is sent. If you withdraw your consent in <strong>in-game Settings &gt; Ad choices</strong>, analytics stops. Outside these regions, analytics runs once Google's message has indicated that no consent is required.</li>
 <li><strong>Data analysis</strong>: we export these events to Google BigQuery (Google Cloud, stored in the European Union) to analyse them.</li>
 <li><strong>Legal bases</strong>: your consent in the EEA, the UK and Switzerland; elsewhere, our legitimate interest in improving the game.</li>
-<li>The game uses no crash-reporting tool.</li>
 <li>More information: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></li>
+</ul>
+
+<h2>3a. Crash reports (Firebase Crashlytics)</h2>
+<p>To detect and fix crashes and errors in the game, we use Firebase Crashlytics, provided by Google.</p>
+<ul>
+<li><strong>Data sent when a crash or error occurs</strong>: the technical trace of the error, the device state at that time (model, operating system, free memory and storage, orientation, whether the device is modified), the game version, the level being played, the screen shown, the difficulty settings version, a Crashlytics installation identifier and the Firebase installation identifier.</li>
+<li><strong>What we do not send</strong>: no name, no email, no advertising identifier. This data is not used for advertising and we do not link it to your identity.</li>
+<li><strong>With your consent</strong>: same choice and same regions as analytics (section 3). If you refuse or withdraw your consent in <strong>in-game Settings &gt; Ad choices</strong>, no report is sent.</li>
+<li><strong>Legal bases</strong>: your consent in the EEA, the UK and Switzerland; elsewhere, our legitimate interest in keeping the game working.</li>
 </ul>
 
 <h2>4. Remote settings (Firebase Remote Config)</h2>
@@ -160,12 +177,13 @@
 <p>If you email us, we use your email address and message to reply. Legal basis: our legitimate interest in answering your requests.</p>
 
 <h2>9. Recipients and transfers outside the EU</h2>
-<p>The recipients are Google (advertising, analytics, remote settings, Google Play) and Apple (App Store). Google and Apple may process data outside the European Union, in particular in the United States. Google states that it relies on the EU–US Data Privacy Framework and on the European Commission's standard contractual clauses for these transfers. Apple processes purchases under its own privacy policy.</p>
+<p>The recipients are Google (advertising, analytics, crash reports, remote settings, Google Play) and Apple (App Store). Google and Apple may process data outside the European Union, in particular in the United States. Google states that it relies on the EU–US Data Privacy Framework and on the European Commission's standard contractual clauses for these transfers. Apple processes purchases under its own privacy policy.</p>
 
 <h2>10. Retention</h2>
 <ul>
 <li>Game data: on your device, until you uninstall the game.</li>
 <li>Analytics: event-level and user-level data are kept for 14 months in Google Analytics; the copy exported to BigQuery is deleted automatically after 60 days.</li>
+<li>Crash reports: 90 days at Google (Crashlytics), then deleted.</li>
 <li>Advertising data: under Google's rules.</li>
 <li>Remote settings: installation identifier on your device until you uninstall the game; at Google, until we ask for its deletion, then erased within 180 days (section 4).</li>
 <li>Email exchanges: 3 years after our last exchange, then deleted.</li>
