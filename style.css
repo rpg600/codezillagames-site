@@ -5,5 +5,6 @@ header a.brand{font-weight:800;font-size:20px;color:var(--ink);text-decoration:n
 main{max-width:960px;margin:auto;padding:0 24px 48px}.card{background:var(--card);border:2px solid #F2C58E;border-radius:20px;padding:24px;margin:16px 0}
 h1,h2{color:var(--ink);line-height:1.2}h1{font-size:32px}a{color:var(--accent)}.hero{text-align:center}.hero img.logo{max-width:420px;width:100%}
 .hero img.icon{width:96px;height:96px;border-radius:22px}footer{text-align:center;color:var(--muted);font-size:14px;padding:24px}
+.stores{margin:20px 0 4px}a.store{display:inline-block;background:var(--ink);color:#FFF8E8;font-weight:700;padding:12px 22px;border-radius:14px;text-decoration:none}a.store:hover{background:var(--accent)}
 .todo{background:#ffe1d6;padding:0 4px;border-radius:4px}
 @media (max-width:600px){nav a{margin-left:10px}h1{font-size:26px}}
